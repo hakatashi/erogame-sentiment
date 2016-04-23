@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^1.0.4",
+    "csv-stringify": "^1.0.2",
+    "through2": "^2.0.1"
+  }
 }
