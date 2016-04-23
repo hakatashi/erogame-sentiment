@@ -30,11 +30,11 @@ tokenizer = ([point, text], done) ->
   stringifier.write [point, tokenized-text]
 
   total-records++
-  console.log "Processed #{total-records} records" if total-records % 10 is 0
+  console.log "Processed #{total-records} records" if total-records % 1000 is 0
 
   done!
 
-queue = async.queue tokenizer, 10
+queue = async.queue tokenizer, 50
 
 parser.on \data (data) -> queue.push [data]
 
