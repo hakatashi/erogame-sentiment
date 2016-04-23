@@ -25,7 +25,7 @@ tokenizer = ([point, text], done) ->
   error, result <- mecab.parse text
   return done error if error
 
-  tokenized-text = result.map (.7) .join ' '
+  tokenized-text = result.map (-> if it.7.0 is \* then it.0 else it.7) .join ' '
 
   stringifier.write [point, tokenized-text]
 
